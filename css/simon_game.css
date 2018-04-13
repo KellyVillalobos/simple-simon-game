@@ -1,6 +1,11 @@
 html, body {
     height: 100%;
     box-sizing: border-box;
+    background-size: cover;
+    box-shadow: inset 0px 0px 60px 40px rgba(0,0,0,0.3);
+}
+body{
+    background-image: url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/scratched-and-scraped-metal-texture-6.jpg");
 }
 
 * {
@@ -31,8 +36,10 @@ html, body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    border: 1px solid grey;
     width: 40%;
+    background-color: #808080;
+    border: 3px solid black;
+
 }
 
 .colored-box {
@@ -40,22 +47,23 @@ html, body {
     height: 45%;
     width: 45%;
     border: 1px solid grey;
+    box-shadow: inset 0px 0px 10px 0px;
 }
 
 #red {
-    background-color: #ff0000;
+    background-color: #FC0D1C;
 }
 
 #blue {
-    background-color: #0000ff;
+    background-color: #0B24FB;
 }
 
 #yellow {
-    background-color: yellow;
+    background-color: #FFFD38;
 }
 
 #green {
-    background-color: #00ff00;
+    background-color: #0E7E12;
 }
 #font{
     text-align: center;
