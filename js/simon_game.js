@@ -25,10 +25,11 @@ $('#start-button').click(function () {
     // clearInterval(runMemory);
     newArray();
     // console.log(memoryArray);
-   playback();
+    playback();
 });
-//this will only run once
 
+
+//this will only run once
 
 
 //event functions I need
@@ -52,28 +53,29 @@ $('#red, #green, #yellow, #blue').click(function () {
     console.log(`player array is ${playerArray}`);
     console.log(`memory array is ${memoryArray}`);
 
-   if(playerArray.toString() == memoryArray.toString()){
-       newArray();
-       setTimeout(playback, 250);
-       playerArray = [];
-       i = 0;
-   }else if(playerArray[i] == memoryArray[i]){
-       i++;
-       console.log(playerArray);
-       console.log(memoryArray);
+    if (playerArray.toString() == memoryArray.toString()) {
+        newArray();
+        setTimeout(playback, 250);
+        playerArray = [];
+        i = 0;
+    } else if (playerArray[i] == memoryArray[i]) {
+        i++;
+        console.log(playerArray);
+        console.log(memoryArray);
 
 
-    }else{
-       alert('Wrong!! Game Over!!');
-       $('#start-button').removeClass('.btn btn-lg btn-success');
-       $('#start-button').addClass('btn btn-lg btn-dark');
-       i = 0
+    } else {
+        alert('Wrong!! Game Over!!');   
+        $('#start-button').text('Start Game');
+        $('#start-button').removeClass('.btn btn-lg btn-success');
+        $('#start-button').addClass('btn btn-lg btn-dark');
+        i = 0
 
 
-   }
+    }
+
 
 });
-
 
 
 // this code will produce a console log every second
@@ -90,8 +92,8 @@ function playback() {
         } else {
             $("#" + memoryArray[count]).animate({'opacity': .3}, 250);
             $("#" + memoryArray[count]).animate({'opacity': 1}, 250);
-             count++;
-             // arrayCounter++;
+            count++;
+            // arrayCounter++;
             console.log('Repeating this line ' + count);
         }
     }, interval);
@@ -126,7 +128,18 @@ function newArray() {
 
 }
 
-//solve for making the new array interval and comparing the two arrays.
+// model the problem /domain/process in natural language
+//click start, simon moves
+//simon move means the computer selects a box at random
+//simon adds that move to its sequence of moves then
+//lights up that box
+
+//simon waits for a player to move a choice
+// if a player chooses correctly for each sequence
+//simon moves again
+
+//if a player clicks a box, light up that box.
+
 
 
 
